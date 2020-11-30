@@ -54,3 +54,8 @@
   color: var(--gray);
   letter-spacing: 1px;
 }
+
+.resultValue {
+  margin: 1rem 0 0;
+  font-weight: 700;
+}
