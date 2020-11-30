@@ -1,7 +1,8 @@
 import React from 'react';
+import { Header } from './Header';
 
 export const App = () => {
   return (
-    <h1>Hellow world</h1>
+    <Header />
   );
 }
