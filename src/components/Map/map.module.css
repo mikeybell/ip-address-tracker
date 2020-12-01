@@ -2,3 +2,7 @@
   width: 100%;
   height: calc(100vh - 252px); /* height of header */
 }
+
+.marker {
+  top: 28px;
+}
