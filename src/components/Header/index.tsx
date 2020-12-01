@@ -1,6 +1,6 @@
 import React from 'react';
 import { useInitialIpAddress } from './hooks/useInitialIpAddress';
-import { InfoDisplay } from '../InfoDisplay';
+import { DisplayPanel } from '../DisplayPanel';
 import styles from './header.module.css';
 
 export const Header = () => {
@@ -14,7 +14,7 @@ export const Header = () => {
         placeholder="Search for any IP address or domain"
         type="text"
       />
-      <InfoDisplay payload={payload} error={error} />
+      <DisplayPanel payload={payload} error={error} />
     </header>
   )
 };

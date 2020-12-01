@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './infoDisplay.module.css';
+import styles from './displayPanel.module.css';
 import { Payload } from '../../types';
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
   error: string;
 }
 
-export const InfoDisplay = ({ payload, error }: Props) => {
+export const DisplayPanel = ({ payload, error }: Props) => {
 
   if (error) {
     return <p className={styles.message}>{error}</p>
