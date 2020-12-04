@@ -39,5 +39,5 @@ export const Map = ({ payload }: Props) => {
       .addTo(map);
   }
 
-  return <div ref={mapContainer} className={styles.map}></div>;
+  return <main ref={mapContainer} className={styles.map}></main>;
 }

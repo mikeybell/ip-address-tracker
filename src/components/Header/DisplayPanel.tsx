@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './displayPanel.module.css';
+import styles from './styles/displayPanel.module.css';
 import { Payload } from '../../types';
 
 interface Props {

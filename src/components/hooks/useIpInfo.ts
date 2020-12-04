@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { DEFAULT_IP } from '../constants';
-import { Payload } from '../../../types';
+import { DEFAULT_IP } from './constants';
+import { Payload } from '../../types';
 
 const URL = `https://geo.ipify.org/api/v1?apiKey=${process.env.REACT_APP_IP_API_KEY}`;
 

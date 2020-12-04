@@ -1,0 +1,17 @@
+.header {
+  background-image: url(../../../assets/pattern-bg.png);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 4rem 10rem;
+  position: relative;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #fff;
+  font-size: 3.2rem;
+  font-weight: 500;
+}
