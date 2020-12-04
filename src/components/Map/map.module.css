@@ -1,3 +1,9 @@
+@keyframes spin {
+  100% {
+    transform: rotate(360deg)
+  }
+}
+
 .map {
   width: 100%;
   height: calc(100vh - 252px); /* height of header */
@@ -5,4 +11,17 @@
 
 .marker {
   top: 28px;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 252px); /* height of header */
+}
+
+.spinContainer {
+  width: 3.2rem;
+  animation: spin 1000ms linear infinite;
+  line-height: 0;
 }

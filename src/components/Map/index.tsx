@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
+import { ReactComponent as Loader } from '../../assets/loading.svg';
 import styles from './map.module.css';
 import { Payload } from '../../types';
 
@@ -19,7 +20,9 @@ export const Map = ({ payload }: Props) => {
   const mapContainer = useRef(null);
 
   useEffect(() => {
-    setupMap([payload.location.lng, payload.location.lat]);
+    if (payload.ip !== '') {
+      setupMap([payload.location.lng, payload.location.lat]);
+    }
   }, [payload]);
 
   const setupMap = (center: [number, number]): void => {
@@ -38,6 +41,14 @@ export const Map = ({ payload }: Props) => {
       .setLngLat(center)
       .addTo(map);
   }
+
+  if (payload.ip === '') {
+    return <div className={styles.loading}>
+      <div className={styles.spinContainer}>
+        <Loader />
+      </div>
+    </div>
+  };
 
   return <main ref={mapContainer} className={styles.map}></main>;
 }
