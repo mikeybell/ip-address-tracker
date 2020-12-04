@@ -3,6 +3,7 @@ html {
   --gray: #969696;
   --dark-gray: #2b2b2b;
   --light-gray: #e6e6e6;
+  --error: #ee2727;
 }
 
 body {

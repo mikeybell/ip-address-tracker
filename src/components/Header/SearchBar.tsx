@@ -3,10 +3,11 @@ import { ReactComponent as Arrow } from '../../assets/icon-arrow.svg';
 import styles from './styles/searchBar.module.css';
 
 interface Props {
+  error: string
   handleSearch: (searchValue: string) => Promise<void>;
 }
 
-export const SearchBar = ({ handleSearch }: Props) => {
+export const SearchBar = ({ error, handleSearch }: Props) => {
   const [searchValue, setSearchValue] = useState<string>('');
 
   const onChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -18,10 +19,14 @@ export const SearchBar = ({ handleSearch }: Props) => {
     handleSearch(searchValue);
   };
 
+  const inputStyles = error
+  ? `${styles.input} ${styles.error}`
+  : styles.input;
+
   return (
     <form className={styles.form}>
       <input
-        className={styles.input}
+        className={inputStyles}
         onChange={onChange}
         placeholder="Search for any IP address or domain"
         type="text"

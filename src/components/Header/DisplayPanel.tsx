@@ -10,7 +10,9 @@ interface Props {
 export const DisplayPanel = ({ payload, error }: Props) => {
 
   if (error) {
-    return <p className={styles.message}>{error}</p>
+    return <p className={`${styles.message} ${styles.error}`}>
+      Invalid IP address or domain detected. Please try again.
+    </p>
   };
 
   if (payload.ip === '') {

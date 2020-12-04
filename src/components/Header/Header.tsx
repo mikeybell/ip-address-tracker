@@ -14,7 +14,7 @@ export const Header = ({ payload, error, handleSearch }: Props) => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>IP Address Tracker</h1>
-      <SearchBar handleSearch={handleSearch} />
+      <SearchBar error={error} handleSearch={handleSearch} />
       <DisplayPanel payload={payload} error={error} />
     </header>
   )

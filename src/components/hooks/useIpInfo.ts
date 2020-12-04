@@ -26,9 +26,10 @@ export const useIpInfo = () => {
   const handleSearch = async (searchValue: string) => {
     try {
       const res = await fetch(`${URL}&domain=${searchValue}`);
-      if (!res.ok) throw new Error();
+      if (!res.ok) throw new Error(res.statusText);
       const data = await res.json();
       setPayload(data);
+      if (error !== '') setError('');
     } catch (err) {
       setError(err.message);
     }
